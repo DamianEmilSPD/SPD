@@ -5,7 +5,7 @@
 #include <sstream>
 #include <cctype>
 //#include <algorithm>
-#//include <vector>
+//include <vector>
 //#include <cstdlib>
 using namespace std;
 
