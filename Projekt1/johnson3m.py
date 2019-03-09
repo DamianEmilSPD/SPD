@@ -8,14 +8,11 @@ data_1 = [
 ]
 
 #tworzenie wirtualnych maszyn
-
-data = [
-    [data_1[0][0] + data_1[0][1], data_1[0][1] + data_1[0][2]],
-    [data_1[1][0] + data_1[1][1], data_1[1][1] + data_1[1][2]],
-    [data_1[2][0] + data_1[2][1], data_1[2][1] + data_1[2][2]],
-    [data_1[3][0] + data_1[3][1], data_1[3][1] + data_1[3][2]],
-]
-
+data = []
+for i in range(0, len(data_1)):
+    array = [data_1[i][0] + data_1[i][1], data_1[i][1] + data_1[i][2]]
+    data.append(array)
+print("Podgląd danych dla wirtualnych maszyn: ")
 print(data)
 
 #sortowanie od najmniejszego do największego
