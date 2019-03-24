@@ -70,7 +70,7 @@ def calc_neh(p_ij, nbm, nbj, xs):
                     boo = boo+1
             print("moje comb ", comb)
             contarr.insert(len(contarr), comb)
-            print("boo i moo i too", boo, moo, too)
+            #print("boo i moo i too", boo, moo, too)
             cont = reorder_array(comb, p_ij, nbm, boo+1)
             print("cont ")
             print(cont)
