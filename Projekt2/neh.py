@@ -1,4 +1,6 @@
 import numpy
+import time
+import math
 
 
 def read_from_file(filename):
@@ -102,16 +104,19 @@ def calc_neh(p_ij, nbm, nbj, xs):
     print("Execution time ", exec)
 
 
-nbm, nbj, p_ij = read_from_file("data.txt")
+nbm, nbj, p_ij = read_from_file("ta050.txt")
 #print("Data: \n ", p_ij)
 #print("Number of Machines:", nbm)
 #print("Number of jobs:", nbj)
 print("Non-increasing order of total processing times:")
 order_seq = order_neh(p_ij, nbm, nbj)
-print(order_seq)
+#print(order_seq)
 #ordered_data = reorder_array(order_seq, p_ij, nbm, nbj)
 # print("Ordered data: ")
 # print(ordered_data)
+start = time.time_ns() / 10**6
 calc_neh(p_ij, nbm, nbj, order_seq)
+stop = time.time_ns() / 10**6 - start
 print("Time elapsed:  milliseconds")
+print(stop)
 print("zakonczylem sie poprawnie:)")
