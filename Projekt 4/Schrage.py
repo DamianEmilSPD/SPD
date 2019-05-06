@@ -102,7 +102,7 @@ def schragepmtn(N):
 col, nbj, data = read_from_file("in50.txt")
 newdata =[]
 for i in range(len(data)):
-   task = job(i, data[i][0], data[i][1], data[i][0])
+   task = job(i, data[i][0], data[i][1], data[i][2])
    newdata.append(task)
 
 
@@ -114,7 +114,7 @@ print("Cmax: ", cma)
 
 newdata = []
 for i in range(len(data)):
-    task = job(i, data[i][0], data[i][1], data[i][0])
+    task = job(i, data[i][0], data[i][1], data[i][2])
     newdata.append(task)
 print("===================================")
 ord, cma = schragepmtn(newdata)
